@@ -18,23 +18,19 @@ variable "enable_classiclink" {
   default = "false"
 }
 
-
 variable "enable_classiclink_dns_support" {
   default = "false"
 }
 
-
 variable "preferred_number_of_public_subnets" {
   type        = number
-  description = "number of public subnets"
+  description = "Number of public subnets"
 }
-
 
 variable "preferred_number_of_private_subnets" {
   type        = number
-  description = "number of private subnets"
+  description = "Number of private subnets"
 }
-
 
 variable "name" {
   type    = string
@@ -43,30 +39,36 @@ variable "name" {
 }
 
 variable "tags" {
-  description = "A mapping of tags to assign to all resources."
+  description = "A mapping of tags to assign to all resources"
   type        = map(string)
   default     = {}
+
 }
 
 variable "environment" {
   type        = string
   description = "environment"
+
 }
+
 
 variable "ami" {
   type        = string
-  description = "AMI ID for the launch template"
+  description = "AMI ID for launch template"
+
 }
 
 variable "keypair" {
   type        = string
-  description = "key pair for the instances"
+  description = "keypair  for instances"
+
 }
 
 variable "account_no" {
   type        = number
   description = "the account number"
 }
+
 
 variable "master-username" {
   type        = string
